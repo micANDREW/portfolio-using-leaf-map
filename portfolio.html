@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>Portfolio</h1>
+    <h2>Personal Projects</h2>
+    <section class="flex-container element-to-animate" id="projects">
+        
+            <div class="project-item">
+                <img src="images/RPS-game.png" alt="Rock-Paper-Scissors Project Screenshot">
+                <h3>Rock Paper Scissors</h3>
+                <p>Game created using JavaScript, CSS, and HTML.</p>
+                <a href="https://github.com/micANDREW/rock-paper-scissors" target="_blank">GitHub Repo</a>
+                <a href="https://micandrew.github.io/rock-paper-scissors/" target="_blank">GitHub Pages</a>
+            </div>
+
+            <div class="project-item">
+                <img src="images/hungry-moles.png" alt="Hungry Mole Game Project Screenshot">
+                <h3>Hunger Moles</h3>
+                <p>Game created using JavaScript, CSS, and HTML.</p>
+                <a href="https://github.com/micANDREW/hungry-mole-game" target="_blank">GitHub Repo</a>
+                <a href="https://micandrew.github.io/hungry-mole-game/" target="_blank">GitHub Pages</a>
+            </div>
+
+            <div class="project-item">
+                <img src="images/Youtube.png" alt="YouTube Clone Project Screenshot">
+                <h3>YouTube Clone</h3>
+                <p>Recreation of YouTube landing page: Usage of HTML and CSS w/ use of puesdo classes, navigation, CSS positioning and more.</p>
+                <a href="https://github.com/micANDREW/YoutubeClone" target="_blank">GitHub Repo</a>
+                <a href="https://micandrew.github.io/YoutubeClone/" target="_blank">GitHub Pages</a>
+            </div>
+            
+            <div class="project-item">
+                <img src="images/Calculator.png" alt="Calculator Screenshot">
+                <h3>YouTube Clone</h3>
+                <p>Recreation of YouTube landing page: Usage of HTML and CSS w/ use of puesdo classes, navigation, CSS positioning and more.</p>
+                <a href="https://github.com/micANDREW/Calculator" target="_blank">GitHub Repo</a>
+                <a href="https://micandrew.github.io/Calculator/" target="_blank">GitHub Pages</a>
+            </div>
+        </section>
+
+        <div id="map" style="width: 85%; height: 400px; margin: 10px auto;"></div>
+    
+    <script>
+        // Initialize the map with a specific location and zoom level.
+        var map = L.map("map").setView([10.6605, -61.5131], 12);
+
+        // Add the OpenStreetMap base layer.
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        }).addTo(map);
+
+        // Add a marker for Port of Spain.
+        var marker = L.marker([10.6605, -61.5131]).addTo(map);
+
+        // Add a circle centered at Port of Spain.
+        var circle = L.circle([10.6605, -61.5131], {
+        color: "blue",
+        fillColor: "blue",
+        fillOpacity: 0.3,
+        radius: 750, // Adjust the radius (in meters) as needed.
+        }).addTo(map);
+    </script>
+      
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  font-family: Arial;
+  background-color: rgb(68, 63, 63);
+  color: whitesmoke
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  align-items: center;
+  background-color: rgba(107, 107, 147, 0.59);
+}
+
+.project-item > p {
+  line-height: 1.5;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+a {
+  color: #3988cd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c84e47;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ededed6a;
+}
+
+/* Define the animation */
+@keyframes fadeAndSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to an element */
+.element-to-animate {
+  animation: fadeAndSlideIn 2s ease-in-out;
+}
